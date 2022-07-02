@@ -10,8 +10,8 @@ COPY src src
 COPY ssl ssl
 COPY public public
 
-EXPOSE 3016
-EXPOSE 10000-11100
+EXPOSE 3017
+EXPOSE 10000-20100
 
 RUN npm i -g nodemon
 
