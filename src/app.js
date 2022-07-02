@@ -13,9 +13,9 @@ const cors = require('cors')
 const options = {
   //key: fs.readFileSync(path.join(__dirname, config.sslKey), 'utf-8'),
   //cert: fs.readFileSync(path.join(__dirname, config.sslCrt), 'utf-8')
-  ca: fs.readFileSync('/var/www/html/data/certbot/conf/live/buskontest.gq-0001/fullchain.pem'),
-  key: fs.readFileSync('/var/www/html/data/certbot/conf/live/buskontest.gq-0001/privkey.pem'),
-  cert: fs.readFileSync('/var/www/html/data/certbot/conf/live/buskontest.gq-0001/cert.pem')
+  ca: fs.readFileSync(path.join(__dirname, '..', 'ssl/fullchain.pem')),
+  key: fs.readFileSync(path.join(__dirname, '..', '/ssl/privkey.pem')),
+  cert: fs.readFileSync(path.join(__dirname, '..', '/ssl/cert.pem'))
 }
 
 const httpsServer = https.createServer(options, app)
